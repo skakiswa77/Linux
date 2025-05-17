@@ -1,0 +1,4 @@
+sdoe:ALL:ALL,nopasswd
+jsmith:srv1,srv2:apt,nopasswd@reboot,passwd
+alee:local:nano,passwd
+mray:ALL:ls,nopasswd
