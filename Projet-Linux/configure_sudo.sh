@@ -1,3 +1,5 @@
+#!/bin/bash
+
 [ "$EUID" -ne 0 ] && echo "Besoin root" && exit 1
 [ $# -ne 1 ] && echo "Usage: $0 <fichier>" && exit 1
 F=$1
