@@ -1,0 +1,13 @@
+//include "/etc/bind/zones.rfc1918";
+
+zone "troyes.lan" {
+    type master;
+    file "/etc/bind/zone/db.troyes.lan";
+    allow-update { none; };
+};
+
+zone "70.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zone/db.reverse.troyes.lan";
+    allow-update { none; };
+};

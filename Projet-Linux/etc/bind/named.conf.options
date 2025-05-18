@@ -1,0 +1,21 @@
+acl "auto_vlan" {
+    192.168.70.0/28;
+    localhost;
+    localnets;
+};
+
+options {
+    directory "/var/cache/bind";
+
+    forwarders {
+        1.1.1.1;
+        8.8.8.8;
+    };
+
+    recursion yes;
+    dnssec-validation auto;
+
+    listen-on { any; };
+    listen-on-v6(none;);
+    allow-query { auto_vlan; };
+}
